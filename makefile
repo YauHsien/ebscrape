@@ -1,4 +1,6 @@
-all: main
+all: main exec
 	echo hello, world
 main:
-	ghc src/main.hs
+	stack build
+exec:
+	stack exec ebscrape-exe 
