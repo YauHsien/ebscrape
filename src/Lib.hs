@@ -1,8 +1,13 @@
+{-# LANGUAGE OverloadedStrings #-}
+module Lib
+    ( someFunc
+    ) where
+
 import qualified Data.ByteString.Lazy.Char8 as L8
 import           Network.HTTP.Simple
 
-main :: IO ()
-main = do
+someFunc :: IO ()
+someFunc = do
   response <- httpLBS "https://www.tenlong.com.tw"
   putStrLn $ "The status code was: " ++
              show (getResponseStatusCode response)
