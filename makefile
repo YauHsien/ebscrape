@@ -3,4 +3,5 @@ all: main exec
 main:
 	stack build
 exec:
+	chcp 65001
 	stack exec ebscrape-exe 

@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="no-js">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"c545e9b454","applicationID":"308649","transactionName":"dVdZQ0ELD1sGQ01FS1lcQlRHF0xEBlAQVlE=","queueTime":0,"applicationTime":202,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <title>天瓏網路書店</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" media="all" href="https://d3rjeaxgh430dn.cloudfront.net/assets/application-4362fce514c7f0c50ba76aebb3440993bf10d4c6af4c6705c7339bf401cea45d.css" />
+  <!--[if lt IE 10]>
+    <link rel="stylesheet" media="screen" href="https://d3rjeaxgh430dn.cloudfront.net/assets/ie-c2cac736485b95a4fbbc946fd2fa9dae02e560249cfefb6ae5afec8d945363c1.css" />
+  <![endif]-->
+  <script src="https://d3rjeaxgh430dn.cloudfront.net/assets/application-c700ee1c94c6fdb88b1aa1096181a083410d1ecf9b47321b2f6ccfe0e74ec8d3.js"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="amzA1v21vt14tQAa8YXgA43STetWDENbb9TXifpPJCh3aaQIz1q0V30NrkVcHe9AgATF7kRc9qICQiH0m0Ir7w==" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-10022598-1', 'auto');
+ga('require', 'maxScrollTracker');
+ga('require', 'outboundFormTracker');
+ga('require', 'outboundLinkTracker');
+ga('require', 'pageVisibilityTracker');
+ga('require', 'socialWidgetTracker');
+ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:317001,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '557213394477621'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=557213394477621&ev=PageView&noscript=1"
+/></noscript>
+</head>
+<body>
+  <header class="page-header">
+    <div class="center-container">
+      <a href="/" class="title-block">
+        <h1>天瓏網路書店</h1>
+        <em>全台最齊全</em>
+        <span>中英文電腦書專賣店</span>
+      </a>
+      <nav class="top-nav">
+        <ul class="main-menu">
+          <li><a href="/tw">中文書</a></li>
+          <li><a href="/en">英文書</a></li>
+          <li><a href="/cn">簡體書</a></li>
+          <li class="faq"><a href="/hw">電子開發板</a></li>
+          <li class="faq"><a href="/lists">其他商品</a></li>
+          <li><a href="/about">門市資訊</a></li>
+        </ul>
+        <ul class="right-menu">
+          <li class="alternative-main-menu">
+            <a href="#">
+              <i class="fa fa-bars"></i><span class="hide">主選單</span>
+            </a>
+            <div class="drop-down">
+            </div>
+          </li>
+            <li class="log-in">
+              <a href="/users/sign_in">
+                <i class="fa fa-user-o"></i>登入
+</a>            </li>
+            <li class="sign-up">
+              <a href="/users/sign_up">
+                  <i class="fa fa-user-plus"></i>註冊
+</a>            </li>
+            <li class="member-menu">
+              <a href="#">
+                <i class="fa fa-user-o"></i><span class="text">未登入</span>
+                <div class="drop-down">
+                  <ul>
+                    <li><a href="/users/sign_in">登入</a></li>
+                    <li><a href="/users/sign_up">註冊</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          <li>
+            <a href="/cart?cart_type=auto">
+              <i class="fa fa-shopping-cart"></i><span class="text">購物車</span>
+              <span class="cart-quantity">0</span>
+</a>          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="center-container">
+    <div class="main-block">
+      <a href="https://www.facebook.com/%E5%A4%A9%E7%93%8F%E8%B3%87%E8%A8%8A%E5%9C%96%E6%9B%B8-236436558020/" class="facebook-btn facebook-btn-top">
+        <i class="fa fa-facebook-official"></i><span>天瓏資訊圖書</span><span>粉絲專頁</span>
+      </a>
+
+      <div class="top-search">
+        <form action="/search" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Tl9oo0wsvJS2Foxy45Cfubs/0uExHpVx+blIwYL3ZllTWgx9fsO2HrOuIi1OCJD6tula5CNOIIiUL7684/ppng==" />
+          <input type="text" name="keyword" id="keyword" value="functional" class="input-text" />
+          <button name="top-search-btn" class="top-search-btn"><i class="fa fa-search"></i>搜尋</button>
+</form>
+        <ul class="keywords-list">
+            <li><a href="/events/295">英文書</a></li>
+            <li><a href="/events/289">簡體書</a></li>
+            <li><a href="/events/292">深度學習</a></li>
+            <li><a href="/events/322">Docker</a></li>
+            <li><a href="/events/293">Python</a></li>
+            <li><a href="/events/278">區塊鏈</a></li>
+            <li><a href="/events/311">資料科學</a></li>
+            <li><a href="/events/315">網路爬蟲</a></li>
+            <li><a href="/events/303">必讀經典</a></li>
+            <li><a href="/events/310">Packt</a></li>
+            <li><a href="/events/106">Bob大叔</a></li>
+        </ul>
+      </div>
+
+      <div class="content-wrapper">
+
+        <script>
+fbq('track', 'Search');
+</script>
+<ul class="nav-tabs">
+  <li class="active">
+    <a rel="nofollow" data-method="post" href="/search?keyword=functional">天瓏書庫</a>
+  </li>
+  <li class="">
+    <a rel="nofollow" data-method="post" href="/search_amazon?keyword=functional">全球英文書庫</a>
+  </li>
+</ul>
+<div class="content">
+  <div class="content-inner-block">
+    <div class="search-filter">
+    <span class="search-filter-title">分類：</span>
+      <ul>
+        <li class="active">
+          <a href="/search?keyword=functional&amp;page=3">全部</a>
+        </li>
+        <li class="">
+          <a href="/search?keyword=functional&amp;lang=zh_tw&amp;page=3">繁體書</a>
+        </li>
+        <li class="">
+          <a href="/search?keyword=functional&amp;lang=zh_cn&amp;page=3">簡體書</a>
+        </li>
+        <li class="">
+          <a href="/search?keyword=functional&amp;lang=en&amp;page=3">英文書</a>
+        </li>
+        <li class="">
+          <a href="/search?keyword=functional&amp;lang=hw&amp;page=3">硬體</a>
+        </li>
+        <li class="">
+          <a href="/search?keyword=functional&amp;lang=all&amp;page=3">全部(含停售)</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="search-filter">
+      <span class="search-filter-title">縮小搜尋範圍：</span>
+      <ul>
+        <li class="active">
+          <a href="/search?keyword=functional&amp;page=3">全部</a>
+        </li>
+        <li class="">
+          <a href="/search?filter=title&amp;keyword=functional&amp;page=3">標題</a>
+        </li>
+        <li class="">
+          <a href="/search?filter=author&amp;keyword=functional&amp;page=3">作者譯者</a>
+        </li>
+        <li class="">
+          <a href="/search?filter=manufacturer&amp;keyword=functional&amp;page=3">出版社</a>
+        </li>
+        <li class="">
+          <a href="/search?filter=isbn&amp;keyword=functional&amp;page=3">ISBN</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="search-filter">
+      <span class="search-filter-title">排序：</span>
+      <ul>
+        <li class="active">
+          <a href="/search?keyword=functional&amp;page=3">相關性</a>
+        </li>
+        <li class="">
+          <a href="/search?keyword=functional&amp;page=3&amp;sort=publication_date">出版日期</a>
+        </li>
+        <li class="">
+          <a href="/search?keyword=functional&amp;page=3&amp;sort=salesrank">銷售排行</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="search-result-list">
+      <ul>
+        <li>
+          <a class="cover" href="/products/9780262194815">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/41EJ2KZQM3L.jpg" alt="41ej2kzqm3l" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9780262194815">Exploratory Analysis and Data Modeling in Functional Neuroimaging (Hardcover)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Friedrich T. Sommer, Andrzej Wichert</span>/<span class="category">The MIT Press</span><span class="publish-date">出版日期：2002-12-02</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $1,050
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                
+
+
+
+
+Description:
+
+  Functional imaging tools such as fMRI (functional magnetic 
+  resonance imaging), PET (positron emission tomography), EEG 
+  (electro-encephalogram), ...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9781449323912">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/51DUwreaQ1L.jpg" alt="51duwreaq1l" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9781449323912">Real World OCaml: Functional programming for the masses (Paperback)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Yaron Minsky, Anil Madhavapeddy, Jason Hickey</span>/<span class="category">O&#39;Reilly Media</span><span class="publish-date">出版日期：2013-11-25</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    貴賓價: $1,260
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                This fast-moving tutorial introduces you to OCaml, an industrial-strength programming language designed for expressiveness, safety, and speed. Through the book’s many examples, you...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9787115441706">
+            <img width="200" src="https://images-cn.ssl-images-amazon.com/images/I/41bAT1cgJcL.jpg" alt="41bat1cgjcl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9787115441706">網絡功能虛擬化NFV架構開發測試及應用 (Network Function Virtualization)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">簡體中文</span>/<span class="author">李素游 壽國礎</span>/<span class="category">人民郵電出版社</span><span class="publish-date">出版日期：2017-01-01</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    貴賓價: $393
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                全書分為11章，第1章為NFV概述；第2章介紹NFV體系架構；第3,4章介紹NFV中的兩項基本技術OpenStack和OpenDayLight/SDN，以及討論與NFV的相互關系；第5章介紹開源平臺OPNFV；第6章為NFV測試；第7章為NFV應用場景一般描述；第8-11章為結合應用的描述，包括NFV在5G以及移動核心網、移動邊緣計算(MEC)中的應用等。...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9780789755643">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/41jlAuSdJBL.jpg" alt="41jlausdjbl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9780789755643">Excel 2016 Formulas and Functions (Paperback)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Paul McFedries</span>/<span class="category">Que Publishing</span><span class="publish-date">出版日期：2015-10-11</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    貴賓價: $1,330
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                Book + Content Update Program  Master core Excel 2016 tools for building powerful, reliable spreadsheets with Excel 2016 Formulas and Functions. Excel expert Paul McFedries shows h...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9781491973370">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/51uHmLLXOfL.jpg" alt="51uhmllxofl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9781491973370">Introducing Erlang: Getting Started in Functional Programming</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Simon St. Laurent</span>/<span class="category">O&#39;Reilly Media</span><span class="publish-date">出版日期：2017-03-16</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    貴賓價: $1,254
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                If you’re new to Erlang, its functional style can seem difficult, but with help from this hands-on introduction, you’ll scale the learning curve and discover how enjoyable, powerfu...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9781784398224">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/51YxEOriuqL.jpg" alt="51yxeoriuql" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9781784398224">Functional Programming in JavaScript (Paperback)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Dan Mantyla</span>/<span class="category">Packt Publishing - ebooks Account</span><span class="publish-date">出版日期：2015-03-26</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    貴賓價: $1,083
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                Unlock the powers of functional programming hidden within JavaScript to build smarter, cleaner, and more reliable web apps About This BookDiscover what functional programming is, w...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9781933988924">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/41QBdOSHLtL.jpg" alt="41qbdoshltl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9781933988924">Real World Functional Programming: With Examples in F# and C# (Paperback)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Tomas Petricek, Jon Skeet</span>/<span class="category">Manning Publications</span><span class="publish-date">出版日期：2010-01-25</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $1,650
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                Functional programming languages like F#, Erlang, and Scala are attracting attention as an efficient way to handle the new requirements for programming multi-processor and high-ava...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9781680501667">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/41JOlgk3l8L.jpg" alt="41jolgk3l8l" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9781680501667">Programming Elixir 1.2: Functional -&gt; Concurrent -&gt; Pragmatic -&gt; Fun</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Dave Thomas</span>/<span class="category">Pragmatic Bookshelf</span><span class="publish-date">出版日期：2016-03-06</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $590
+                </span>
+                <span class="status">代購書籍(需要單獨結帳)</span>
+              </li>
+              <li class="desc">
+                You want to explore functional programming, but are put off by the academic feel (tell me about monads just one more time). You know you need concurrent applications, but also know...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9780789743060">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/41t0pkx6FXL.jpg" alt="41t0pkx6fxl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9780789743060">Formulas and Functions: Microsoft Excel 2010 (Paperback)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Paul McFedries</span>/<span class="category">Que Publishing</span><span class="publish-date">出版日期：2010-05-24</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $660
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                MASTER CORE EXCEL 2010 TOOLS FOR BUILDING POWERFUL, RELIABLE SPREADSHEETS!     Excel expert Paul McFedries shows how to use Excel 2010’s core features to solve problems and get the...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9780137000661">
+            <img width="200" src="https://images-eu.ssl-images-amazon.com/images/I/51-CSEOhpxL.jpg" alt="51 cseohpxl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9780137000661">Software Test Engineering with IBM Rational Functional Tester: The Definitive Resource (Paperback)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Chip Davis, Daniel Chirillo, Daniel Gouveia, Fariz Saracevic, Jeffrey</span>/<span class="category">IBM Press</span><span class="publish-date">出版日期：2009-11-01</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $2,100
+                </span>
+                <span class="status">限量商品</span>
+              </li>
+              <li class="desc">
+                &lt;&gt;Praise for Software Test Engineering with IBM Rational Functional Tester   “Finally, a manual for the Software Test Engineer! Many manuals on the market today are geared to...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9781598220117">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/51zNiSt2DgL.jpg" alt="51znist2dgl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9781598220117">Microsoft Excel Functions and Formulas: Excel 97--Excel 2003</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Bernd Held</span>/<span class="category">Jones &amp;amp; Bartlett Learning</span><span class="publish-date">出版日期：2006-09-05</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $1,962
+                </span>
+                <span class="status">代購書籍(需要單獨結帳)</span>
+              </li>
+              <li class="desc">
+                
+
+
+
+
+Description
+
+  Easy to use and equipped with a variety of 
+  functions, Microsoft Excel is the tool of choice when it comes to crunching 
+  numbers, building charts, ...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9780470091234">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/51a0TP0xhZL.jpg" alt="51a0tp0xhzl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9780470091234">SDH/SONET Explained in Functional Models: Modeling the Optical Transport Network</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Huub van Helvoort</span>/<span class="category">Wiley</span><span class="publish-date">出版日期：2005-09-23</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    貴賓價: $1,568
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                
+
+
+
+
+Description:
+
+  
+  H/SONET Explained in Functional Models represents a fresh approach 
+  to the modeling of transport network technologies. This practical guide and ...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9781466515833">
+            <img width="200" src="https://images-eu.ssl-images-amazon.com/images/I/51GH9E3SQ8L.jpg" alt="51gh9e3sq8l" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9781466515833">Window Functions and Their Applications in Signal Processing (Hardcover)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">K. M. M. Prabhu</span>/<span class="category">CRC</span><span class="publish-date">出版日期：2013-10-20</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    貴賓價: $4,212
+                </span>
+                <span class="status">限量商品</span>
+              </li>
+              <li class="desc">
+                Window functions—otherwise known as weighting functions, tapering functions, or apodization functions—are mathematical functions that are zero-valued outside the chosen interval. T...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9781449369996">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/51gsw115kvL.jpg" alt="51gsw115kvl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9781449369996">Introducing Elixir: Getting Started in Functional Programming (Paperback)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Simon St. Laurent, J. David Eisenberg</span>/<span class="category">O&#39;Reilly Media</span><span class="publish-date">出版日期：2014-09-25</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $438
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                Elixir is an excellent language if you want to learn about functional programming, and with this hands-on introduction, you’ll discover just how powerful and fun Elixir can be. Thi...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9780789748676">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/41A2tQuwhIL.jpg" alt="41a2tquwhil" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9780789748676">Excel 2013 Formulas and Functions (Paperback)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Paul McFedries</span>/<span class="category">Que Publishing</span><span class="publish-date">出版日期：2013-02-24</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $840
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                Master core Excel 2013 tools for building powerful, reliable spreadsheets!   Excel expert Paul McFedries shows how to use Excel 2013’s core features to solve problems and get the a...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9780470046555">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/51xVrOCxf1L.jpg" alt="51xvrocxf1l" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9780470046555">Microsoft Office Excel 2007 Formulas &amp; Functions For Dummies (Paperback)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Ken Bluttman, Peter G. Aitken</span>/<span class="category">For Dummies</span><span class="publish-date">出版日期：2007-01-30</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $199
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                
+
+
+
+
+Description
+
+  
+  
+  
+  
+  
+  * Readers discover 
+  how to exploit the power of Excel 2007 with detailed instructions that explore 
+  specialized Excel functions...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9780470525470">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/511rLtO%2BuJL.jpg" alt="511rlto%2bujl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9780470525470">What Functional Managers Need to Know About Project Management (Hardcover)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">International Institute for Learning, Harold Kerzner, Frank P. Saladis</span>/<span class="category">Wiley</span><span class="publish-date">出版日期：2009-09-08</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $299
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                Discover how functional managers can apply the Kerzner Approach to project managementAs a functional manager today, you need to become more involved in project management. That doe...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9781598220216">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/51sp0vYNc5L.jpg" alt="51sp0vync5l" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9781598220216">Advanced SQL Functions in Oracle 10g</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Dr. Richard Earp, Dr. Sikha Bagui</span>/<span class="category">Jones &amp;amp; Bartlett Learning</span><span class="publish-date">出版日期：2006-02-22</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    貴賓價: $1,714
+                </span>
+                <span class="status">下單後立即進貨</span>
+              </li>
+              <li class="desc">
+                
+
+
+
+
+Description
+
+  Designed to 
+  exploit Oracle 10g's SQL, this book takes a comprehensive look at Oracle 10g's 
+  analytical functions, MODEL statements, and regular ex...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9787115370891">
+            <img width="200" src="https://images-cn.ssl-images-amazon.com/images/I/51jLUF4WC9L.jpg" alt="51jluf4wc9l" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9787115370891">不只是美：信息圖表設計原理與經典案例 (The Functional art: An Introduction to imformation graphics and Visualization)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">簡體中文</span>/<span class="author">阿爾伯托·開羅 (Alberto Cairo)</span>/<span class="category">人民郵電出版社</span><span class="publish-date">出版日期：2015-01-01</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    貴賓價: $450
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                不同於以往任何時期，如今我們進入了大數據的信息時代。利用合適的工具，我們可以探索數據的價值和意義，挖掘數據背後的模式及其發展趨勢，而這些信息對我們來說通常並不易見。但是將數據轉換成圖表之後，我們就能夠輕易發現其中隱藏的奧秘。通過本書對信息圖表的介紹，你將學會如何利用圖表工具挖掘數據背後的信息，並對這個復雜的世界產生新的見解。不管你正在面對的是何種數據——商業...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9781583470541">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/51iI6MRcSFL.jpg" alt="51ii6mrcsfl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9781583470541">SQL Built-In Functions and Stored Procedures: The i5/iSeries Programmer&#39;s Guide</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Mike Faust</span>/<span class="category">Mc Press</span><span class="publish-date">出版日期：2005-06-15</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $825
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                
+
+
+
+
+Description:
+
+  Stored procedures and built-in functions can 
+  greatly expand the power and usefulness of SQL, but surprisingly these highly 
+  useful tools remain u...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9780321928849">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/41LrN05GlBL.jpg" alt="41lrn05glbl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9780321928849">The Design Method: A Philosophy and Process for Functional Visual Communication (Paperback)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Eric Karjaluoto</span>/<span class="category">New Riders</span><span class="publish-date">出版日期：2013-08-23</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $630
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                Feeling uninspired? That shouldn’t keep you from creating great design work. Design is not about luck, inspiration, or personal expression. Design is a disciplined pursuit aimed at...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9781466504554">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/51fcuoLGyLL.jpg" alt="51fcuolgyll" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9781466504554">A Functional Start to Computing with Python (Paperback)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Ted Herman</span>/<span class="category">Chapman and Hall/CRC</span><span class="publish-date">出版日期：2013-07-28</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $2,360
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                A Functional Start to Computing with Python enables students to quickly learn computing without having to use loops, variables, and object abstractions at the start. Requiring no p...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9781420076370">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/51g76hZv-cL.jpg" alt="51g76hzv cl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9781420076370">Certified Function Point Specialist Examination Guide (Paperback)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">David Garmus, Janet Russac, Royce Edwards</span>/<span class="category">Auerbach Publications</span><span class="publish-date">出版日期：2010-07-25</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $1,650
+                </span>
+                <span class="status">立即出貨</span>
+              </li>
+              <li class="desc">
+                The Certified Function Point Specialist Examination Guide provides a complete and authoritative review of the rules and guidelines prescribed in the release of version 4.3 of the F...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9780735658363">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/51UNPtWOMXL.jpg" alt="51unptwomxl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9780735658363">Microsoft SQL Server 2012 High-Performance T-SQL Using Window Functions (Paperback)</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Itzik Ben-Gan</span>/<span class="category">Microsoft Press</span><span class="publish-date">出版日期：2012-04-25</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    售價: $1,333
+                </span>
+                <span class="status">代購書籍(需要單獨結帳)</span>
+              </li>
+              <li class="desc">
+                 Apply powerful window functions in T-SQL—and increase the performance and speed of your queries Optimize your queries—and obtain simple and elegant solutions to a variety of probl...
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="cover" href="/products/9780201882957">
+            <img width="200" src="https://images-na.ssl-images-amazon.com/images/I/41qwLS2k0rL.jpg" alt="41qwls2k0rl" />
+</a>          <div class="book-data">
+            <h3>
+            <a href="/products/9780201882957">Haskell: The Craft of Functional Programming, 3/e（Paperback）</a></h3>
+            <ul class="item-info">
+              <li class="basic">
+                <span class="lang">英文</span>/<span class="author">Simon Thompson</span>/<span class="category">Addison-Wesley Professional</span><span class="publish-date">出版日期：2011-10-02</span>
+                </li>
+              <li class="pricing">
+                <span class="price">
+                    貴賓價: $2,326
+                </span>
+                <span class="status">下單後立即進貨</span>
+              </li>
+              <li class="desc">
+                One of the leading textbooks on Haskell programming, this third edition is thoroughly revised throughout and includes new material on testing and domain-specific languages and a va...
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="promo">
+          <a class="cover" href="#">
+            <img src="/images/en-cover.png?1405653709" width="200px" />
+          </a>
+          <div class="book-data">
+            <h3><a href="#">天瓏全球英文書籍代購服務</a></h3>
+            <p>電腦軟硬體、理、工、商、管、文學、小說... 等各種類型英文書籍一應俱全，最快只要兩週工作日即可取書。價格優惠，迅速可靠。</p>
+            <a rel="nofollow" data-method="post" href="/search_amazon?keyword=functional">按此選購 functional 相關書籍。</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="pagination pagination-footer">
+
+      <a rel="prev" class="prev_page" href="/search?keyword=functional&amp;page=2">上一頁</a>
+
+          <a href="/search?keyword=functional">1</a>
+
+          <a rel="prev" href="/search?keyword=functional&amp;page=2">2</a>
+
+          <em>3</em>
+
+          <a rel="next" href="/search?keyword=functional&amp;page=4">4</a>
+
+          <a href="/search?keyword=functional&amp;page=5">5</a>
+
+          <a href="/search?keyword=functional&amp;page=6">6</a>
+
+          <a href="/search?keyword=functional&amp;page=7">7</a>
+
+        <span class="gap">&hellip;</span>
+    
+<a rel="next" class="next_page" href="/search?keyword=functional&amp;page=4">下一頁</a>
+
+
+</div>
+
+
+  </div>
+</div>
+
+
+      </div>
+
+
+    </div><!-- end main-block -->
+
+      <div class="left-sidebar side-block">
+        
+        
+
+<div class="sidebox">
+  <h2>活動主題列表</h2>
+  <ul class="link-list">
+      <li><a href="/events/295">新書｜英文書</a></li>
+      <li><a href="/events/289">新書｜簡體中文書</a></li>
+      <li><a href="/events/292">主題｜深度學習</a></li>
+      <li><a href="/events/322">主題｜Docker</a></li>
+      <li><a href="/events/293">主題｜Python</a></li>
+      <li><a href="/events/323">主題｜AWS</a></li>
+      <li><a href="/events/278">主題｜區塊鏈</a></li>
+      <li><a href="/events/311">主題｜資料科學</a></li>
+      <li><a href="/events/321">主題｜創客 Maker</a></li>
+      <li><a href="/events/315">主題｜網路爬蟲</a></li>
+      <li><a href="/events/320">主題｜博碩名家名著</a></li>
+      <li><a href="/events/303">主題｜必讀經典</a></li>
+      <li><a href="/events/316">出版社｜O&#39;Reilly</a></li>
+      <li><a href="/events/310">出版社｜Packt</a></li>
+      <li><a href="/events/319">出版社｜Manning</a></li>
+      <li><a href="/events/314">出版社｜Cambridge</a></li>
+      <li><a href="/events/312">出版社｜CRC Press</a></li>
+      <li><a href="/events/296">出版社｜歐萊禮</a></li>
+      <li><a href="/events/106">無瑕的程式碼超值合購</a></li>
+      <li><a href="/events/304">Agile tour 2017</a></li>
+  </ul>
+</div>
+
+<div class="sidebox">
+  <h2>特價書籍</h2>
+  <ul class="link-list">
+      <li><a href="/special/604">Coding For Kids</a></li>
+      <li><a href="/special/603">Minecraft &amp; LEGO</a></li>
+      <li><a href="/special/602">Scratch</a></li>
+      <li><a href="/special/578">松崗暢銷書展5折起</a></li>
+  </ul>
+</div>
+
+
+      </div>
+  </div><!-- end center-container -->
+
+  <footer class="page-footer">
+    <div class="center-container">
+      <ul>
+        <li>
+          <a href="/faq">客服與FAQ</a>
+        </li>
+        <li>
+          <a href="/about">連絡我們</a>
+        </li>
+        <li>
+          <a href="/privacy">隱私權政策</a>
+        </li>
+        <li>
+          <a href="/terms">服務條款</a>
+        </li>
+        <li>
+          <a href="http://stats.pingdom.com/dmsuukau99cw/3143884">伺服器狀態</a>
+        </li>
+      </ul>
+      <div class="copyright">
+        Copyright &copy; 2017 Tenlong Computer Book Co, Ltd. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "天瓏網路書店",
+  "alternateName": "Tenlong Computer Book",
+  "url": "https://www.tenlong.com.tw"
+}
+</script>
+</body>
+</html>
